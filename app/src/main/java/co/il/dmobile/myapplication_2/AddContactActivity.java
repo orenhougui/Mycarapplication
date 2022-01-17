@@ -20,11 +20,16 @@ public class AddContactActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 EditText name = findViewById(R.id.name);
-                EditText email = findViewById(R.id.email);
-                User user = new User(R.drawable.avatar7,name.getText().toString(),email.getText().toString());
+                EditText brand = findViewById(R.id.brand);
+                EditText model = findViewById(R.id.model);
+                EditText year = findViewById(R.id.year);
+                EditText price = findViewById(R.id.price);
+
+                Car car = new Car(R.drawable.bmw,brand.getText().toString(),model.getText().toString(),
+                year.getText().toString(),price.getText().toString());
 
                 Intent i = new Intent();
-                i.putExtra("user",user);
+                i.putExtra("user", car);
                 setResult(1,i);
                 finish();
 

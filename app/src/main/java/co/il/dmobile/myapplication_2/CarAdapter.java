@@ -12,47 +12,49 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
+public class CarAdapter extends RecyclerView.Adapter<CarViewHolder> {
 
-    private List<User> Users;
-    public UserAdapter(List<User> users)
+    private List<Car> cars;
+    public CarAdapter(List<Car> cars)
     {
-        this.Users = users;
+        this.cars = cars;
     }
 
-    public void AddContact(User user)
+    public void AddCar(Car car)
     {
-        Users.add(user);
+        cars.add(car);
         notifyDataSetChanged();
-        DataPersistencyHelper.StoreData(Users);
+        DataPersistencyHelper.StoreData(cars);
     }
 
-    public void DeleteContact(int position)
+    public void DeleteCar(int position)
     {
-        Users.remove(position);
+        cars.remove(position);
         notifyDataSetChanged();
-        DataPersistencyHelper.StoreData(Users);
+        DataPersistencyHelper.StoreData(cars);
     }
     @NonNull
     @Override
-    public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CarViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v =LayoutInflater.from(parent.getContext()).inflate(R.layout.contact,parent,false);
-        UserViewHolder vh = new UserViewHolder(v);
+        CarViewHolder vh = new CarViewHolder(v);
         return vh;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
-        User user = Users.get(position);
+    public void onBindViewHolder(@NonNull CarViewHolder holder, int position) {
+        Car car = cars.get(position);
 
-        holder.avatar.setImageResource(user.getImage());
-        holder.name.setText(user.getName());
-        holder.email.setText(user.getEmail());
+        holder.avatar.setImageResource(car.getPhoto());
+        holder.model.setText(car.getModel());
+        holder.year.setText(car.getYear());
+        holder.price.setText(car.getPrice());
+        holder.brand.setText(car.getBrand());
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(),MainActivity2.class);
-                i.putExtra("user",user);
+                i.putExtra("user", car);
                 ActivityOptionsCompat options =
                         ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) v.getContext(),
                                 holder.avatar,
@@ -65,6 +67,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
 
     @Override
     public int getItemCount() {
-        return Users.size();
+        return cars.size();
     }
 }

@@ -2,15 +2,22 @@
     <!-- Base application theme. -->
     <style name="Theme.MyApplication2" parent="Theme.MaterialComponents.DayNight">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryVariant">@color/primaryVariant</item>
+        <e53935 name="colorPrimary">@color/design_default_color_error</e53935>
+        <ff6f60 name="colorPrimaryVariant">@android:color/holo_red_light</ff6f60>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/secondary</item>
-        <item name="colorSecondaryVariant">#c77c02</item>
+        <item name="colorSecondary">@android:color/holo_blue_bright</item>
+        <item name="colorSecondaryVariant">#2196F3</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Theme.MyApplication2.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.MyApplication2.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.MyApplication2.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
