@@ -14,9 +14,9 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         Bundle b = getIntent().getExtras();
-        Car car = (Car) b.getSerializable("user");
+        Car car = (Car) b.getSerializable("car");
 
-        ImageView avatar = findViewById(R.id.photo);
+        ImageView avatar = findViewById(R.id.imageView);
         TextView year = findViewById(R.id.year);
         TextView brand = findViewById(R.id.brand);
         TextView price = findViewById(R.id.price);

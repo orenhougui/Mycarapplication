@@ -14,7 +14,6 @@ public class CarViewHolder extends RecyclerView.ViewHolder {
     public ImageView avatar;
     public TextView model;
     public TextView year;
-    public TextView price;
     public TextView brand;
 
     public CarViewHolder(@NonNull View itemView) {
@@ -24,7 +23,6 @@ public class CarViewHolder extends RecyclerView.ViewHolder {
         avatar = itemView.findViewById(R.id.photo);
         model = itemView.findViewById(R.id.model);
         year = itemView.findViewById(R.id.year);
-        price = itemView.findViewById(R.id.price);
         brand = itemView.findViewById(R.id.brand);
 
     }

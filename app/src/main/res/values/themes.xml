@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.MyApplication2" parent="Theme.MaterialComponents.DayNight">
         <!-- Primary brand color. -->
-        <e53935 name="colorPrimary">@color/design_default_color_error</e53935>
-        <ff6f60 name="colorPrimaryVariant">@android:color/holo_red_light</ff6f60>
+        <item name="colorPrimary">@color/design_default_color_error</item>
+        <item name="colorPrimaryVariant">@android:color/holo_red_light</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@android:color/holo_blue_bright</item>

@@ -48,7 +48,6 @@ public class CarAdapter extends RecyclerView.Adapter<CarViewHolder> {
         holder.avatar.setImageResource(car.getPhoto());
         holder.model.setText(car.getModel());
         holder.year.setText(car.getYear());
-        holder.price.setText(car.getPrice());
         holder.brand.setText(car.getBrand());
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
